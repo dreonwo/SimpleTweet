@@ -13,13 +13,14 @@
         android:icon="@drawable/ic_twitterlogo"
         android:label="Twitter"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".DetailActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            ></activity>
 
         <activity
             android:name=".TimelineActivity"
-            android:theme = "@style/Theme.AppCompat.NoActionBar"
-            >
-        </activity>
-
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
         <activity
             android:name=".LoginActivity"
             android:label="Tweeter"

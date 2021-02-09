@@ -1,6 +1,9 @@
 package com.codepath.apps.restclienttemplate;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.codepath.apps.restclienttemplate.models.Tweet;
+
+import org.parceler.Parcels;
 
 import java.util.List;
 
@@ -52,13 +57,14 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
     }
 
     //Define a viewHolder
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         ImageView ivProfileImage;
         TextView tvBody;
         TextView tvScreenName;
         TextView tvName;
         TextView tvTimestamp;
+        Tweet tweet;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -68,7 +74,7 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             tvScreenName = itemView.findViewById(R.id.tvScreenName);
             tvName = itemView.findViewById(R.id.tvName);
             tvTimestamp = itemView.findViewById(R.id.tvTimestamp);
-
+            itemView.setOnClickListener(this);
 
         }
 
@@ -77,10 +83,21 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             tvScreenName.setText("@" + tweet.user.screenName);
             tvName.setText(tweet.user.name);
             tvTimestamp.setText("· " + tweet.getFormattedTimestamp());
+            this.tweet = tweet;
             Glide.with(context).load(tweet.user.profileImageUrl).transform(new CircleCrop()).into(ivProfileImage);
 
         }
 
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(context, DetailActivity.class);
+
+            Parcelable tweetParcel = Parcels.wrap(tweet);
+
+            intent.putExtra("tweet", tweetParcel);
+
+            context.startActivity(intent);
+        }
     }
 
     public void clear() {
