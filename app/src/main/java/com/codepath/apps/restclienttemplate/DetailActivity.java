@@ -19,6 +19,7 @@ public class DetailActivity extends AppCompatActivity {
     TextView tvScreenName;
     TextView tvTimestamp;
     ImageView ivImage;
+    ImageView ivMedia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +37,13 @@ public class DetailActivity extends AppCompatActivity {
         tvScreenName.setText("@" + tweet.user.screenName);
 
         tvTimestamp = findViewById(R.id.tvTimestamp);
-        tvTimestamp.setText("· " + tweet.getFormattedTimestamp());
+        tvTimestamp.setText(tweet.getFormattedTimestamp());
 
         ivImage = findViewById(R.id.ivImage);
         Glide.with(this).load(tweet.user.profileImageUrl).transform(new CircleCrop()).into(ivImage);
+
+        ivMedia = findViewById(R.id.ivMedia);
+        Glide.with(this).load(tweet.mediaUrl).into(ivMedia);
 
     }
 }
