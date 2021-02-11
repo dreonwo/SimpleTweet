@@ -11,22 +11,24 @@
         android:name=".TwitterApp"
         android:allowBackup="true"
         android:icon="@drawable/ic_twitterlogo"
-        android:label="Twitter"
+        android:label=""
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true"
-        >
-        <activity
-            android:name=".DetailActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            ></activity>
+        android:usesCleartextTraffic="true">
 
         <activity
+            android:name=".ComposeActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".DetailActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
             android:name=".TimelineActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".LoginActivity"
             android:label="Tweeter"
             android:theme="@style/AppTheme">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
