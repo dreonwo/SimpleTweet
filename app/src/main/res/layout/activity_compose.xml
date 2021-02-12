@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8F8C8C"
+    android:background="#FFFFFF"
     tools:context=".ComposeActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -39,11 +39,13 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="-2dp"
         android:layout_marginTop="5dp"
+        android:background="#7C6F6F"
         android:ems="10"
         android:gravity="start|top"
         android:hint="What's happening?"
         android:inputType="textMultiLine"
         android:minLines="5"
+        android:textColor="#FFFFFF"
         tools:layout_editor_absoluteX="51dp"
         tools:layout_editor_absoluteY="101dp" />
 
@@ -55,5 +57,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
-        android:text="@string/tweet" />
+        android:background="#000000"
+        android:text="@string/tweet"
+        android:textColor="#FFFFFF" />
 </RelativeLayout>
