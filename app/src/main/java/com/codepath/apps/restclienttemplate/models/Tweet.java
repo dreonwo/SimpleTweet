@@ -21,6 +21,8 @@ public class Tweet {
     public long id;
     public String mediaUrl;
 
+    //Empty Constructor
+     Tweet(){}
 
     public static Tweet fromJson(JSONObject jsonObject) throws JSONException {
         Tweet tweet = new Tweet();

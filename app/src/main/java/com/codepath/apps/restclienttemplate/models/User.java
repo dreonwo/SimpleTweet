@@ -8,6 +8,8 @@ import org.parceler.Parcel;
 public class User {
 
 
+    User(){}
+
     public String name;
     public String screenName;
     public String profileImageUrl;
