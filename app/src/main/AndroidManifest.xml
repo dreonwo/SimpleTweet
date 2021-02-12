@@ -27,7 +27,7 @@
         <activity
             android:name=".LoginActivity"
             android:label="Tweeter"
-            android:theme="@style/AppTheme">
+            android:theme="@style/Theme.AppCompat.NoActionBar">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

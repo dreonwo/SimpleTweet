@@ -18,6 +18,18 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/ivProfileImage"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        tools:text="Username" />
+
+    <TextView
         android:id="@+id/tvScreenName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,8 +39,21 @@
         android:layout_toEndOf="@+id/tvName"
         android:autoLink="all"
         android:linksClickable="true"
-        android:textColor="#6C6B6B"
+        android:textColor="#AFAFAF"
         tools:text="rpandey1234" />
+
+    <TextView
+        android:id="@+id/tvTimestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvBody"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toEndOf="@+id/tvScreenName"
+        android:textColor="#AFAFAF"
+        tools:text="Timestamp" />
 
     <TextView
         android:id="@+id/tvBody"
@@ -40,31 +65,8 @@
         android:layout_toEndOf="@+id/ivProfileImage"
         android:autoLink="all"
         android:linksClickable="true"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         tools:text="This is my tweet!" />
-
-    <TextView
-        android:id="@+id/tvName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="0dp"
-        android:layout_toEndOf="@+id/ivProfileImage"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        tools:text="Username" />
-
-    <TextView
-        android:id="@+id/tvTimestamp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="0dp"
-        android:layout_toEndOf="@+id/tvScreenName"
-        android:textColor="#6C6B6B"
-        tools:text="Timestamp" />
 
     <FrameLayout
         android:layout_width="match_parent"
