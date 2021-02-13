@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:adjustViewBounds="true"
-            app:srcCompat="@drawable/ic_twittericoninapp"
+            app:srcCompat="@drawable/ic_twittericon_2_"
             tools:srcCompat="@tools:sample/avatars" />
     </androidx.appcompat.widget.Toolbar>
 
