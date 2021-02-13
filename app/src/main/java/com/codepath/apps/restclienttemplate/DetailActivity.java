@@ -3,6 +3,7 @@ package com.codepath.apps.restclienttemplate;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,6 +21,7 @@ public class DetailActivity extends AppCompatActivity {
     TextView tvTimestamp;
     ImageView ivImage;
     ImageView ivMedia;
+    ImageView ivBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,16 @@ public class DetailActivity extends AppCompatActivity {
 
         ivMedia = findViewById(R.id.ivMedia);
         Glide.with(this).load(tweet.mediaUrl).into(ivMedia);
+
+        ivBack = findViewById(R.id.ivBack);
+
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
 
     }
 }
